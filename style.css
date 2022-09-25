@@ -1,0 +1,161 @@
+:root {
+  --clr-primary-bg: hsl(185, 75%, 39%);
+  --clr-primary-font-strong: hsl(229, 23%, 23%);
+  --clr-primary-font-base: hsl(227, 10%, 46%);
+  --clr-primary-bg-card: #fff;
+  --clr-ntrl-hr: hsl(0, 0%, 59%);
+  --fs-base: 1.6rem;
+  --fs-alt-big: 1.8rem;
+  --fs-sml: 1.4rem;
+  --fs-alt-smlr: 1rem;
+  --ff-base: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-base);
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: var(--clr-primary-bg);
+  background-image:
+    url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-position:
+    top 200% left -61%,
+    bottom 245% right -50%;
+  background-repeat: no-repeat;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main,
+.card-content,
+.profile,
+.card-stat,
+.stat {
+  display: flex;
+}
+
+main,
+.card-content,
+.profile,
+.stat {
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  justify-content: center;
+}
+
+.card {
+  width: 35rem;
+  height: 37.4rem;
+  background-color: var(--clr-primary-bg-card);
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.151) 0px 20px 55px;
+}
+
+.card-img {
+  height: 14rem;
+  width: 100%;
+  background-image: url(/images/bg-pattern-card.svg);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  position: relative;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  left: 35%;
+  top: 62%;
+}
+
+.card-content,
+.profile,
+.stat {
+  flex-direction: column;
+}
+
+.card-content {
+  margin-top: 7rem;
+  height: fit-content;
+  color: var(--clr-primary-font-base);
+}
+
+.card-stat {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.name,
+.stat-number {
+  font-size: var(--fs-alt-big);
+  font-weight: 700;
+  color: var(--clr-primary-font-strong);
+}
+
+.age {
+  font-weight: 400;
+  margin-left: 0.4rem;
+  color: var(--clr-primary-font-base);
+}
+
+.city {
+  font-size: var(--fs-sml);
+  margin-top: 0.2rem;
+}
+
+.stat-name {
+  font-size: var(--fs-alt-smlr);
+  letter-spacing: 1px;
+}
+
+hr {
+  margin: 2.5rem 0;
+  width: 100%;
+  border: none;
+  background-color: var(--clr-ntrl-hr);
+  opacity: 0.3;
+  height: 1px;
+}
